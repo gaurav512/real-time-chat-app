@@ -212,6 +212,10 @@ input {
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
+
+a{
+    text-decoration: none;
+}
   
 /* input box */
 :focus{outline: none;}
