@@ -20,6 +20,10 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+.chat-page {
+    background-color: #eeeeee;
+}
+
 h1 {
     margin-bottom: 16px;
 }
@@ -37,25 +41,37 @@ input {
     outline: none;
 }
 
-button {
+.btn-grad {background-image: linear-gradient(to right, #D66D75 0%, #E29587  51%, #D66D75  100%)}
+
+
+.btn-grad {
+   margin: 10px;
+   border: none;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad:hover {
     cursor: pointer;
-    padding: 12px;
-    background: #7C5CBF;
-    border: none;
-    color: white;
-    font-size: 16px;
-    transition: background .3s ease;
-}
+    background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
 
-button:hover {
-    background: #6b47b8;
-}
 
-button:disabled {
-    cursor: default;
-    background: #7c5cbf94;
-}
-
+ .btn-grad:disabled {
+     cursor: default;
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
 /* Join Page Styles */
 
 .centered-form {
@@ -93,7 +109,8 @@ button:disabled {
     height: 100vh;
     color: white;
     background: #333744;
-    width: 225px;
+    width: 15%;
+    min-width: 15%;
     overflow-y: scroll
 }
 
@@ -181,3 +198,33 @@ button:disabled {
     font-weight: 300;
     padding: 12px 24px 0 24px;
 }
+
+/* Chat containers */
+.container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    width: fit-content;
+    max-width: 85%;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 2px 4px #888888;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+  
+/* input box */
+:focus{outline: none;}
+
+.col-3{float: left; width: 90%; margin: 0px 3%; position: relative;} /* necessary to give position: relative to parent. */
+input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+
+
+.effect-16{border: 0; padding: 4px 0; border-bottom: 1px solid #aaa; background-color: transparent;}
+
+.effect-16 ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #3399FF; transition: 0.4s;}
+.effect-16:focus ~ .focus-border,
+.has-content.effect-16 ~ .focus-border{width: 100%; transition: 0.4s;}
+.effect-16 ~ label{position: absolute; left: 0; width: 100%; top: 9px; color: #aaa; transition: 0.3s; z-index: -1; letter-spacing: 0.5px;}
+.effect-16:focus ~ label, .has-content.effect-16 ~ label{top: -16px; font-size: 12px; color: #3399FF; transition: 0.3s;}
+

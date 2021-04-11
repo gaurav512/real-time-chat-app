@@ -7,7 +7,7 @@
     <link rel="icon" href="/img/favicon.png">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body>
+<body class="chat-page">
     <div class="chat">
         <div id="sidebar" class="chat__sidebar">
 
@@ -18,17 +18,21 @@
         
             <div class="compose">
                 <form id="message-form" autocomplete="off">
-                    <input name="message" type="text" placeholder="Message" required>
-                    <button>Send</button>
+                    <div class="col-3 input-effect">
+                        <input name="message" type="text" placeholder="" required class="effect-16">
+                        <label>Enter Message</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <button class="btn-grad">Send</button>
                 </form>
-                <button id="send-location">Send location</button>            
+                <button id="send-location" class="btn-grad">Send location</button>            
             </div>
         </div>
     </div>
 
     
     <script id="message-template" type="text/html">
-        <div class="message">
+        <div class="container">
             <p>
                 <span class="message__name">{{username}}</span>
                 <span class="message__meta">{{createdAt}}</span>
