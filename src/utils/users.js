@@ -21,6 +21,11 @@ const addUser = ({ id, username, room }) => {
             error: 'Username is in use'
         }
     }
+    if(username === 'admin') {
+        return {
+            error: 'Username cannot be admin'
+        }
+    }
 
     // Store user
     const user = { id, username, room }

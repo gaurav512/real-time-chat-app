@@ -45,11 +45,10 @@ io.on('connection', (socket) => {
         io.to(user.room).emit('message', generateMessage(user.username, message))
         
         if(filter.isProfane(message)) {
-            callback('WARNING! Please refrain from profane language.')
+            socket.emit('message', generateMessage('Admin', 'WARNING! Please refrain from profane language.'))
         }
-        else {
-            callback()
-        }
+        callback()
+        
     })
 
     socket.on('sendLocation', (coords, callback) => {
