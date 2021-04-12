@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat App</title>
     <link rel="icon" href="/img/favicon.png">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles-login.css">
 </head>
 <body>
-    <div class="centered-form">
+
+    <!-- <div class="centered-form">
         <div class="centered-form__box">
             <h1>Join</h1>
             <form action="/chat.html" autocomplete="off">
@@ -19,6 +20,48 @@
                 <button class="btn-grad">Join</button>
             </form>
         </div>
+    </div> -->
+
+    <div class="login-wrap">
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Chat</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">About</label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <form action="/chat.html" autocomplete="off">
+                            <div class="group">
+                                <label for="user" class="label">Username</label>
+                                <input id="user" name="username" type="text" class="input">
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">Room</label>
+                                <input id="pass" name="room" type="text" class="input">
+                            </div>
+                            <div class="group">
+                                <button class="button">Join</button>
+                            </div>
+                            <div class="hr"></div>
+                    </form>
+                </div>
+                <div class="sign-up-htm">
+                    <div class="group">
+                        <br>
+                        <h2>Created by Gaurav Singh </h2>
+                        <br>
+                    </div>
+
+                    <div>
+                        <h3>Wanna get in touch?</h3>
+                        <ul>
+                            <li><a href="https://github.com/gaurav512">GitHub</a></li>
+                            <li><a href="https://instagram.com/grvsingh_">Instagram</a></li>
+                            <li><a href="mailto:itsgaurav01@gmail.com">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 </body>
 </html>

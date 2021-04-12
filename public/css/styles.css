@@ -184,19 +184,22 @@ input {
     font-size: 22px;
     background: #2c2f3a;
     padding: 24px;   
+    text-transform: capitalize;
 }
 
 .list-title {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 18px;    
     margin-bottom: 4px;
     padding: 12px 24px 0 24px;
+    text-transform: capitalize;
 }
 
 .users {
     list-style-type: none;
     font-weight: 300;
     padding: 12px 24px 0 24px;
+    text-transform: capitalize;
 }
 
 /* Chat containers */
@@ -221,7 +224,7 @@ a{
 :focus{outline: none;}
 
 .col-3{float: left; width: 90%; margin: 0px 3%; position: relative;} /* necessary to give position: relative to parent. */
-input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; max-width: 90%; box-sizing: border-box; letter-spacing: 1px;word-wrap: break-word;overflow-wrap: break-word;white-space: initial;}
 
 
 .effect-16{border: 0; padding: 4px 0; border-bottom: 1px solid #aaa; background-color: transparent;}
